@@ -61,7 +61,7 @@ export default definePlugin({
 
     getTimeoutDuration() {
         const base = settings.store.refreshFrequency * 1000; // seconds → ms
-        const offset = (Math.floor(Math.random() * 11) - 5) * 1000; // -5s to +5s
+        const offset = (Math.random() * 10 - 5) * 1000; // random float between -5s and +5s
         return Math.max(1000, base + offset); // at least 1s
     },
 
